@@ -1,0 +1,37 @@
+{
+    "manifest_version": 3,
+    "name": "saraansh",
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "scripting",
+        "background",
+        "https://api.openai.com/"
+    ],
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "icons": {
+        "16": "saraansh.png",
+        "48": "saraansh.png"
+    },
+    "action": {
+        "default_title": "Creates yt Summary",
+        "default_icon": "saraansh.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.youtube.com/watch?v=*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "host_permissions": [
+        "https://api.openai.com/*"
+    ]
+}

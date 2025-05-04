@@ -120,16 +120,16 @@ function handleNewVideo(ytUrl) {
         if (!summaryBtn) {
             summaryBtn = document.createElement("button");
             summaryBtn.id = "summary-btn";
-            summaryBtn.style.border = "none"; // No border for a sleek look
-            summaryBtn.style.background = "transparent"; // Transparent background to let SVG shine
-            summaryBtn.style.cursor = "pointer"; // Pointer cursor for interactivity
-            summaryBtn.style.display = "flex"; // Align content within the button
-            summaryBtn.style.alignItems = "center"; // Center the icon
-            summaryBtn.style.justifyContent = "center"; // Center the icon
-            summaryBtn.style.width = "60px"; // Button dimensions
+            summaryBtn.style.border = "none";
+            summaryBtn.style.background = "transparent"; 
+            summaryBtn.style.cursor = "pointer"; 
+            summaryBtn.style.display = "flex"; 
+            summaryBtn.style.alignItems = "center"; 
+            summaryBtn.style.justifyContent = "center"; 
+            summaryBtn.style.width = "60px"; 
             summaryBtn.style.height = "60px";
-            summaryBtn.style.borderRadius = "50%"; // Circular shape
-            summaryBtn.style.boxShadow = "0px 4px 8px rgba(0, 0, 0, 0.2)"; // Add a subtle shadow for depth
+            summaryBtn.style.borderRadius = "50%"; 
+            summaryBtn.style.boxShadow = "0px 4px 8px rgba(0, 0, 0, 0.2)"; 
 
             // Adding SVG for the Hindi letter "श" inside a circle
             summaryBtn.innerHTML = `
@@ -214,7 +214,7 @@ function handleNewVideo(ytUrl) {
 
 
 
-            // sending whole modified input to the background.js
+            // sending whole modified input to the background.js...
             chrome.runtime.sendMessage({ action: "sendTranscript", type: "REQUEST_AI", data: { prompt, transScriptText } },
 
                 (response) => {

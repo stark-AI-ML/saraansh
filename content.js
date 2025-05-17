@@ -308,7 +308,8 @@ function handleNewVideo(ytUrl) {
                     const detailedSummaryBtn = document.getElementById("detailed-summary");
                     const conciseSummaryBtn = document.getElementById("concise-summary");
 
-
+// have to handle multiple clicks... I think it can be done by  setTimeout... and boolean if false and true for certain period of time  based on that i have to
+                    //perform this task 
                     normalSummaryBtn.addEventListener("click", () => {
                         if (handleSummaryClick)
                             SummaryOptionsClick("normal");
@@ -324,7 +325,7 @@ function handleNewVideo(ytUrl) {
 
 
                 } else {
-                    console.log("Summary options already exist. No action performed.");
+                    console.log("Summary options already exist...");
                 }
 
 
